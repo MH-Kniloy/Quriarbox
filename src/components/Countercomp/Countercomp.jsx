@@ -3,7 +3,7 @@ import CountUp from 'react-countup';
 
 const Countercomp = ({icon, num,numAdd, para}) => {
   return (
-    <div>
+    <div className='mb-12 md:mb-0'>
       <img className="mb-3 mx-auto" src={icon} alt="" />
       <h3 className="text-orange text-[40px] font-bold text-center font-heading">
         <CountUp end={num} duration={3} enableScrollSpy={true} scrollSpyDelay={500} />

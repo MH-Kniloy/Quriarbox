@@ -43,9 +43,9 @@ const Counter = () => {
   return (
     <>
     
-    <section className='pb-[170px]'>
+    <section className='md:pb-[170px] pb-[80px]'>
         <Container>
-            <div className='flex justify-between items-end'>
+            <div className='md:flex justify-between items-end'>
                 {
                     details.map((item)=>(
                         <Countercomp icon={item.icon} num={item.num} para={item.para} numAdd={item.numAdd} />
