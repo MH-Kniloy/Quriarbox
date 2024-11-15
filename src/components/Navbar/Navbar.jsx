@@ -14,8 +14,12 @@ const Navbar = () => {
        setTimeout(() => {
          inputRef.current?.focus();
        }, 0); // Ensure input is rendered before focusing
-     }
+     } 
    };
+
+     const handleBlur = () => {
+       setSearch(false); // Close the search bar when input loses focus
+     };
   return (
     <>
       <nav className="py-[15px] bg-navbg">
@@ -66,6 +70,7 @@ const Navbar = () => {
                     } transition-all duration-700 outline-none`}
                     type="search"
                     ref={inputRef}
+                    onBlur={handleBlur} // Trigger when input loses focus
                   />
                   <div className="w-[50px] h-[53px] bg-[#FFEDC9] rounded-tr-md rounded-br-md flex justify-center items-center cursor-pointer">
                     <FaSearch
