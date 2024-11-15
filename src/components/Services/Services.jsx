@@ -49,17 +49,17 @@ const Services = () => {
   ];
   return (
     <>
-      <section className="pb-[170px]">
+      <section className="md:pb-[170px] pb-[60px] px-4 md:px-0">
         <div className="text-center">
-          <h2 className="font-heading text-[32px] font-semibold text-orange">
+          <h2 className="font-heading md:text-[32px] text-[26px] font-semibold text-orange">
             SERVICES
           </h2>
-          <p className="text-[40px] font-bold text-[#11111d] pb-[90px]">
+          <p className="md:text-[40px] text-[24px] font-bold text-[#11111d] md:pb-[90px] pb-12">
             Our services for you
           </p>
         </div>
         <Container>
-          <div className="flex justify-between gap-6">
+          <div className="md:flex justify-between gap-6 flex-wrap">
             {details.map((item) => (
               <Servicecomp
                 icon={item.icon}
