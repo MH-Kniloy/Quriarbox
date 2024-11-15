@@ -44,7 +44,7 @@ const Navbar = () => {
             <div
               className={`${
                 dropdown ? "left-0 opacity-100" : "left-[-100%] opacity-0"
-              } md:flex md:opacity-100 md:static transition-all duration-700 ease-in-out relative absolute top-0`}
+              } md:flex md:opacity-100 md:static transition-all duration-700 ease-in-out relative top-0`}
             >
               <div className="flex md:hidden pb-4 md:pb-0">
                 <input

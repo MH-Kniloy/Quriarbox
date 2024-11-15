@@ -11,21 +11,21 @@ import { IoCall } from "react-icons/io5";
 const Mapcontact = () => {
   return (
     <>
-      <section className="py-[180px]">
+      <section className="md:py-[180px] py-[80px] px-4 md:px-0">
         <Container>
-          <div className="text-center mb-[85px]">
-            <h3 className="text-orange text-[32px] font-heading font-semibold">
+          <div className="text-center md:mb-[85px] mb-10">
+            <h3 className="text-orange md:text-[32px] text-xl font-heading font-semibold">
               FIND US
             </h3>
-            <p className="text-[#11111d] text-[40px] font-bold">
+            <p className="text-[#11111d] md:text-[40px] text-2xl font-bold">
               Access us easily
             </p>
           </div>
 
-          <div className="flex gap-4 mb-8">
+          <div className="md:flex gap-4 mb-8">
             <div>
               <iframe
-                className="md:h-[450px] h-[350px]"
+                className="md:h-[450px] h-[350px] w-full md:w-[760px] mb-8 md:mb-0"
                 width="760"
                 height="430"
                 frameborder="0"
@@ -37,8 +37,8 @@ const Mapcontact = () => {
                 <a href="https://www.gps.ie/">gps tracker sport</a>
               </iframe>
             </div>
-            <div className="bg-white pt-[80px] pb-[90px] ps-[100px] pe-[125px]">
-              <h3 className="text-[#464558] text-xl font-bold mb-10">
+            <div className="bg-white md:pt-[80px] md:pb-[90px] md:ps-[100px] md:pe-[125px] py-[40px] px-[20px]">
+              <h3 className="text-[#464558] text-xl font-bold md:mb-10 mb-6">
                 {" "}
                 Contact with us
               </h3>
@@ -50,7 +50,7 @@ const Mapcontact = () => {
                 <FiClock className="text-[36px] text-[#FFAF0F]" /> Monday -
                 Friday: 10 am - 10pm Sunday: 11 am - 9pm
               </h4>
-              <h4 className="text-[#5C5B6C] leading-[120%] w-[285px] flex items-center gap-4 mb-[50px]">
+              <h4 className="text-[#5C5B6C] leading-[120%] w-[285px] flex items-center gap-4 md:mb-[50px] mb-6">
                 <MdOutlineEmail className="text-[24px] text-[#FFAF0F]" />{" "}
                 info@quriarbox.com
               </h4>
@@ -62,8 +62,8 @@ const Mapcontact = () => {
             </div>
           </div>
           <div className='flex justify-center'>
-            <button className='flex gap-2 items-center py-[24px] px-[115px] bg-orange text-white text-xl font-heading font-bold rounded-md'>
-              <IoCall className='text-[30px]' />
+            <button className='flex gap-2 items-center justify-center py-[24px] md:px-[115px] w-full md:w-auto bg-orange text-white md:text-xl text-[18px] font-heading font-bold rounded-md'>
+              <IoCall className='md:text-[30px] text-2xl' />
               Call us to delivery 123-456789
             </button>
           </div>

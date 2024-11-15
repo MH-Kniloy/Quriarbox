@@ -5,18 +5,18 @@ import { FaPaperPlane } from "react-icons/fa";
 const Contactform = () => {
   return (
     <>
-      <section className="pb-[200px]">
+      <section className="md:pb-[200px] px-4 md:px-0">
         <div className="container mx-auto max-w-[870px]">
-          <div className='flex gap-8 items-center'>
+          <div className='md:flex gap-8 items-center'>
             <div>
-              <img src={Contact} alt="" />
-              <h3 className="text-2xl text-orange font-semibold font-heading mb-5">
+              <img className='w-1/2 md:w-auto mx-auto md:mx-0 mb-4 md:mb-0' src={Contact} alt="" />
+              <h3 className="md:text-2xl text-xl text-orange font-semibold font-heading md:mb-5 mb-3">
                 REQUEST A CALLBACK
               </h3>
-              <h4 className="text-[40px] font-bold w-[420px] leading-[118%] mb-2">
+              <h4 className="md:text-[40px] text-2xl font-bold md:w-[420px] leading-[118%] md:mb-2 mb-6">
                 We will contact in the shortest time.
               </h4>
-              <p className="text-2xl font-semibold text-[#9291A1]">
+              <p className="md:text-2xl text-xl mb-4 md:mb-0 font-semibold text-[#9291A1]">
                 Monday to Friday, 9am-5pm.
               </p>
             </div>
