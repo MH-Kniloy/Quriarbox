@@ -11,27 +11,32 @@ const Counter = () => {
     const details = [
       {
         icon: `${Counter1}`,
-        num: "26+",
+        num: "26",
+        numAdd:"+",
         para: "Awards won",
       },
       {
         icon: `${Counter2}`,
-        num: "65+",
+        num: "65",
+        numAdd:"+",
         para: "States covered",
       },
       {
         icon: `${Counter3}`,
-        num: "689K+",
+        num: "689",
+        numAdd:"K+",
         para: "Happy clients",
       },
       {
         icon: `${Counter4}`,
-        num: "130M+",
+        num: "130",
+        numAdd:"M+",
         para: "Goods delivered",
       },
       {
         icon: `${Counter5}`,
-        num: "130M+",
+        num: "130",
+        numAdd:"M+",
         para: "Business hours",
       },
     ];
@@ -43,7 +48,7 @@ const Counter = () => {
             <div className='flex justify-between items-end'>
                 {
                     details.map((item)=>(
-                        <Countercomp icon={item.icon} num={item.num} para={item.para} />
+                        <Countercomp icon={item.icon} num={item.num} para={item.para} numAdd={item.numAdd} />
                     ))
                 }
             </div>

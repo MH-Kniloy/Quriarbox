@@ -18,7 +18,7 @@ const Navbar = () => {
    };
 
      const handleBlur = () => {
-       setSearch(false); // Close the search bar when input loses focus
+      setTimeout(()=> setSearch(false), 100); // Close the search bar when input loses focus
      };
   return (
     <>
