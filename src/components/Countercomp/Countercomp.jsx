@@ -1,5 +1,4 @@
 import React from 'react'
-import Couner1 from '../../assets/counter1.png'
 
 const Countercomp = ({icon, num, para}) => {
   return (
