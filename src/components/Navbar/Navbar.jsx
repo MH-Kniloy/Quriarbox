@@ -10,16 +10,24 @@ const Navbar = () => {
   const inputDesktopRef = useRef(null);
   const inputMobileRef = useRef(null);
 
-   const handleSearchClick = (isMobile) => {
-    setSearch(true)
-      setTimeout(() => {
-        if (isMobile) {
-          inputMobileRef.current?.focus();
-        } else {
-          inputDesktopRef.current?.focus();
-        }
-      }, 0);
-   };
+
+  const handleSearchToggle = (isMobile) => {
+    // Toggle search bar
+    setSearch((prev) => {
+      const newState = !prev;
+      // Focus only if opening
+      if (newState) {
+        setTimeout(() => {
+          if (isMobile) {
+            inputMobileRef.current?.focus();
+          } else {
+            inputDesktopRef.current?.focus();
+          }
+        }, 0);
+      }
+      return newState;
+    });
+  };
 
      const handleBlur = () => {
       setTimeout(()=> setSearch(false), 100); // Close the search bar when input loses focus
@@ -57,11 +65,11 @@ const Navbar = () => {
                   ref={inputMobileRef}
                   onBlur={handleBlur} // Trigger when input loses focus
                 />
-                <div className="w-[50px] h-[53px] bg-[#FFEDC9] rounded-tr-md rounded-br-md flex justify-center items-center cursor-pointer">
-                  <FaSearch
-                    onClick={() => handleSearchClick(true)}
-                    className=" text-[#FFAF0F] text-[24px]"
-                  />
+                <div
+                  onClick={() => handleSearchToggle(true)}
+                  className="w-[50px] h-[53px] bg-[#FFEDC9] rounded-tr-md rounded-br-md flex justify-center items-center cursor-pointer"
+                >
+                  <FaSearch className=" text-[#FFAF0F] text-[24px]" />
                 </div>
               </div>
               <ul className="md:flex items-center">
@@ -107,11 +115,11 @@ const Navbar = () => {
                     ref={inputDesktopRef}
                     onBlur={handleBlur} // Trigger when input loses focus
                   />
-                  <div className="w-[50px] h-[53px] bg-[#FFEDC9] rounded-tr-md rounded-br-md flex justify-center items-center cursor-pointer">
-                    <FaSearch
-                      onClick={() => handleSearchClick(false)}
-                      className=" text-[#FFAF0F] text-[24px]"
-                    />
+                  <div
+                    onClick={() => handleSearchToggle(false)}
+                    className="w-[50px] h-[53px] bg-[#FFEDC9] rounded-tr-md rounded-br-md flex justify-center items-center cursor-pointer"
+                  >
+                    <FaSearch className=" text-[#FFAF0F] text-[24px]" />
                   </div>
                 </div>
                 <button className="bg-[#FFE4D9] text-orange font-heading py-3 px-5 rounded-md md:text-xl font-bold">

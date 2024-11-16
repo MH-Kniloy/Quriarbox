@@ -6,8 +6,8 @@ const Footerbottom = () => {
     <>
       <section className="py-8 bg-[#222132]">
         <Container>
-          <div className="flex justify-between">
-            <p className="text-[14px] text-[#DBDBE9] font-medium">
+          <div className="md:flex justify-between text-center md:text-start">
+            <p className="text-[14px] text-[#DBDBE9] font-medium mb-2 md:mb-0">
               All rights Reserved © Your Company, 2021
             </p>
             <h6 className="text-[14px] text-[#DBDBE9] font-medium">
